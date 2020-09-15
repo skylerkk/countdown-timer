@@ -23,6 +23,15 @@ btn.addEventListener("click", function(){
         var hours = Math.floor((timerCount/(1000 * 60 * 60)))
         var minutes = Math.floor((timerCount % (1000 * 60 *60))/ (1000 * 60));
         var seconds = Math.floor((timerCount % (1000 * 60))/ 1000);
+        if (hours < 10){
+            hours = "0" + hours;
+        } 
+        if (minutes < 10){
+            minutes = "0" + minutes;
+        } 
+        if (seconds < 10){
+            seconds = "0" + seconds;
+        }
         let currentTimer = hours + ":" + minutes + ":" + seconds;
         document.getElementById("timer").innerHTML = currentTimer;
         
