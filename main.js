@@ -14,15 +14,16 @@ btn.addEventListener("click", function(){
     let timerSeconds = document.getElementById("secondsInput").value;
 
     var targetTime = new Date().getTime();
+    targetTime = targetTime + (1000 * timerSeconds - 1) + (1000 * 60 * timerMinutes) + (1000 * 60 * 60 * timerHours);
 
-    targetTime = targetTime + (1000 * timerSeconds) + (1000 * 60 * timerMinutes) + (1000 * 60 * 60 * timerHours);
+    
     var timerFunc = setInterval(countdownTimer, 1000);
     function countdownTimer(){
         let currentTime = new Date().getTime();
         timerCount = targetTime - currentTime;
-        var hours = Math.floor((timerCount/(1000 * 60 * 60)))
-        var minutes = Math.floor((timerCount % (1000 * 60 *60))/ (1000 * 60));
-        var seconds = Math.floor((timerCount % (1000 * 60))/ 1000);
+        let hours = Math.floor((timerCount/(1000 * 60 * 60)))
+        let minutes = Math.floor((timerCount % (1000 * 60 *60))/ (1000 * 60));
+        let seconds = Math.floor((timerCount % (1000 * 60))/ 1000);
         if (hours < 10){
             hours = "0" + hours;
         } 
