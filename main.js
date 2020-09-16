@@ -25,7 +25,7 @@ btn.addEventListener("click", function(){
     //get a new target time Date
     var targetTime = new Date().getTime();
 
-    //add the seconds, minutes, and hours (-1 to the seconds to fix the error)
+    //add the seconds, minutes, and hours to the target time from the form. (-1 to the seconds to fix the bug)
     targetTime = targetTime + (1000 * timerSeconds - 1) + (1000 * 60 * timerMinutes) + (1000 * 60 * 60 * timerHours);
 
     
