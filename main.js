@@ -4,6 +4,7 @@ var timer = document.getElementById("timer");
 var formLayout = document.getElementById("formLayout");
 timer.style.visibility = "hidden";
 
+
 var timeCount;
 var targetTime;
 var timerFunc;
@@ -48,6 +49,7 @@ function countdownTimer() {
 
 function clickFunction() {
 
+
     
     formsLink.style.visibility = "hidden";
     btn.style.visibility = "hidden";
@@ -57,6 +59,7 @@ function clickFunction() {
     let timerHours = document.getElementById("hoursInput").value;
     let timerMinutes = document.getElementById("minutesInput").value;
     let timerSeconds = document.getElementById("secondsInput").value;
+
 
 
     targetTime = new Date().getTime();
@@ -69,3 +72,4 @@ function clickFunction() {
 }
 
 btn.addEventListener("click", clickFunction);
+
