@@ -15,10 +15,17 @@ function countdownTimer() {
     let currentTime = new Date().getTime();
     timerCount = targetTime - currentTime;
 
-    let hours = Math.floor((timerCount / (1000 * 60 * 60)))
+    let hours = Math.floor((timerCount / (1000 * 60 * 60)));
     let minutes = Math.floor((timerCount % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((timerCount % (1000 * 60)) / 1000);
+    let seconds = Math.round((timerCount % (1000 * 60)) / 1000);
 
+    if(minutes === 60){
+        minutes = "0";
+    }
+    if (seconds === 60){
+        seconds = "0";
+    }
+    
     if (hours < 10) {
         hours = "0" + hours;
     }
