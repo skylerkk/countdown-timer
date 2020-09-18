@@ -19,10 +19,8 @@ function countdownTimer() {
     let minutes = Math.floor((timerCount % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.round((timerCount % (1000 * 60)) / 1000);
 
-    if(minutes === 60){
-        minutes = "0";
-    }
     if (seconds === 60){
+        minutes += 1;
         seconds = "0";
     }
     
