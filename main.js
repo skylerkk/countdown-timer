@@ -22,6 +22,10 @@ function countdownTimer() {
     if (seconds === 60){
         minutes += 1;
         seconds = "0";
+    } else if (seconds === 60 && minutes === 60){
+        seconds = 0;
+        minutes = 0;
+        hours += 1;
     }
     
     if (hours < 10) {
